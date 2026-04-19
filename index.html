@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bea.blox TTK</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  background: black;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #ff0080 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: moveBg 20s linear infinite;
+  opacity: 0.1;
+}
+
+@keyframes moveBg {
+  from { transform: translate(0,0); }
+  to { transform: translate(-200px,-200px); }
+}
+
+.card {
+  position: relative;
+  background: #0a0a0a;
+  border-radius: 25px;
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  border: 2px solid #ff0080;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px #ff0080; }
+  to { box-shadow: 0 0 30px #ff0080; }
+}
+
+.profile {
+  width: 110px;
+  border-radius: 50%;
+  border: 3px solid #ff0080;
+  margin-bottom: 15px;
+  animation: glow 2s infinite alternate;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: white;
+  background: #111;
+  transition: 0.2s;
+}
+
+.link:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 15px #ff0080;
+}
+
+.footer {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #ff0080;
+  letter-spacing: 2px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+
+  <img class="profile" src="https://cdn.discordapp.com/attachments/1322628458483941420/1495559991199924304/IMG-20260419-WA0008.jpg">
+
+  <h2>Bea.blox TTK</h2>
+
+  <a class="link" href="https://www.tiktok.com/@bea_blox.ofc?_r=1&_t=ZS-95gGNTTTPRU">🎵 TikTok</a>
+  <a class="link" href="https://www.instagram.com/bea_blox.ofc?igsh=MWtxOW01ZDg2ZXViZQ==">📸 Instagram</a>
+  <a class="link" href="https://discord.gg/JEy2mmb5nK">💬 Discord</a>
+  <a class="link" href="https://www.roblox.com/users/5542456754/profile">🎮 Roblox</a>
+
+  <div class="footer">THE ETERNAL SHOW</div>
+
+</div>
+
+</body>
+</html>
