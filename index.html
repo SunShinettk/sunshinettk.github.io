@@ -5,80 +5,94 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bea.blox TTK</title>
 
+<!-- Ícones -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 body {
   margin: 0;
   padding: 0;
   font-family: Arial;
-  background: black;
-  overflow: hidden;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  overflow: hidden;
 }
 
+/* FUNDO */
 body::before {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  body::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url('https://i.postimg.cc/xjwjmHfh/0ea4b7963fdc2aa32d3340467b2a4c5a.jpg') no-repeat center center/cover;
-  filter: blur(20px) brightness(0.6);
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.85)),
+    url('https://i.postimg.cc/xjwjmHfh/0ea4b7963fdc2aa32d3340467b2a4c5a.jpg')
+    no-repeat center center/cover;
+  filter: blur(15px);
   z-index: -1;
-  }
+}
 
+/* CARD */
 .card {
-  position: relative;
-  background: #0a0a0a;
+  background: rgba(10,10,10,0.75);
+  backdrop-filter: blur(15px);
   border-radius: 25px;
   padding: 30px;
   width: 300px;
   text-align: center;
   border: 2px solid #ff0080;
-  animation: glow 2s infinite alternate;
+  box-shadow: 0 0 30px #ff0080;
+  animation: fadeIn 1s ease;
 }
 
-@keyframes glow {
-  from { box-shadow: 0 0 10px #ff0080; }
-  to { box-shadow: 0 0 30px #ff0080; }
+/* ANIMAÇÃO ENTRADA */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
+/* FOTO */
 .profile {
   width: 110px;
   border-radius: 50%;
   border: 3px solid #ff0080;
+  box-shadow: 0 0 20px #ff0080;
   margin-bottom: 15px;
-  animation: glow 2s infinite alternate;
 }
 
+/* BOTÕES */
 .link {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin: 10px 0;
-  padding: 12px;
-  border-radius: 15px;
+  margin: 12px 0;
+  padding: 14px;
+  border-radius: 20px;
   text-decoration: none;
   color: white;
-  background: #111;
-  transition: 0.2s;
+  background: rgba(0,0,0,0.6);
+  font-weight: bold;
+  transition: 0.25s;
 }
 
+.link i {
+  font-size: 18px;
+}
+
+/* HOVER */
 .link:hover {
-  transform: scale(1.07);
-  box-shadow: 0 0 15px #ff0080;
+  transform: scale(1.06);
+  box-shadow: 0 0 20px #ff0080;
+  background: rgba(0,0,0,0.8);
 }
 
+/* TEXTO FINAL */
 .footer {
-  margin-top: 15px;
+  margin-top: 18px;
   font-size: 12px;
   color: #ff0080;
   letter-spacing: 2px;
@@ -90,14 +104,26 @@ body::before {
 
 <div class="card">
 
-  <img class="profile" src="https://i.postimg.cc/J07Kntyr/IMG-20260419-WA0008.jpg">
+  <img class="profile" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <h2>Bea.blox TTK</h2>
 
-  <a class="link" href="https://www.tiktok.com/@bea_blox.ofc?_r=1&_t=ZS-95gGNTTTPRU">🎵 TikTok</a>
-  <a class="link" href="https://www.instagram.com/bea_blox.ofc?igsh=MWtxOW01ZDg2ZXViZQ==">📸 Instagram</a>
-  <a class="link" href="https://discord.gg/JEy2mmb5nK">💬 Discord</a>
-  <a class="link" href="https://www.roblox.com/users/10229829584/profile" target="_blank">🎮 Roblox</a>
+  <a class="link" href="https://www.tiktok.com/@bea_blox.ofc?_r=1&_t=ZS-95gGNTTTPRU" target="_blank">
+    <i class="fab fa-tiktok"></i> TikTok
+  </a>
+
+  <a class="link" href="https://www.instagram.com/bea_blox.ofc?igsh=MWtxOW01ZDg2ZXViZQ==" target="_blank">
+    <i class="fab fa-instagram"></i> Instagram
+  </a>
+
+  <a class="link" href="https://discord.gg/JEy2mmb5nK" target="_blank">
+    <i class="fab fa-discord"></i> Discord
+  </a>
+
+  <a class="link" href="https://www.roblox.com/users/10229829584/profile" target="_blank">
+    <i class="fas fa-gamepad"></i> Roblox
+  </a>
+
   <div class="footer">THE ETERNAL SHOW</div>
 
 </div>
